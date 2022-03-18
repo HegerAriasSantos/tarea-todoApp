@@ -16,22 +16,18 @@ export class AppComponent implements OnInit {
 
   constructor() { }
 
-
-
-  
-
-  nombre = "";
-  nameToUpdate = "";
+  nombre:string = "";
+  nameToUpdate: string = "";
 
   myValue:number =0;
-  
-  
+
+
 
   //CREAR UN ARREGLO DE TAREAS
 
   tareas:string[] = [];
 
-  
+
 
   addTasks(){
 
@@ -39,17 +35,17 @@ export class AppComponent implements OnInit {
 
     this.tareas.push( this.nombre )
     this.nombre = "";
-    
+
 
   }
 
-  
+
   getTasks( idx:number ){
 
-    
+
     this.nameToUpdate = this.tareas[idx];
     this.myValue = idx;
-  }  
+  }
 
 
   //EDITAR TAREAS DEL ARREGLO
@@ -64,7 +60,7 @@ export class AppComponent implements OnInit {
     this.nameToUpdate = "";
 
     console.log('Editando tarea');
-    
+
   }
 
   //ELIMINAR TAREAS DEL ARREGLO
@@ -76,15 +72,15 @@ export class AppComponent implements OnInit {
 
     if (confirmation) {
       this.tareas.splice(idx, 1);
-      
+
     }
   }
 
 
   ngOnInit() {
-    
+
   }
 
-  
+
 
 }
